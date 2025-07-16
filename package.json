@@ -1,0 +1,11 @@
+{
+  "name": "adobe-compressor",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"npm --prefix backend start\" \"npm --prefix frontend start\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
