@@ -23,20 +23,24 @@ Upload, compressão e download com interface moderna — tudo rodando localmente
     cd Adobe-Web-Compressor-PDF
     ```
 
-2. **Configure as variáveis de ambiente do backend**  
-   (na pasta `backend/`, crie um arquivo `.env` com suas credenciais da Adobe)
+2. **Configure o token de acesso ao Sydle One no backend**
 
-    PDF_SERVICES_CLIENT_ID=SEU_CLIENT_ID
-    PDF_SERVICES_CLIENT_SECRET=SEU_CLIENT_SECRET
+     Na pasta backend/, crie um arquivo .env contendo seu token de acesso ao Sydle One
+    ```bash
+     SYDLE_TOKEN=SEU_TOKEN_DE_AUTENTICACAO_DO_SYDLE_ONE
+     ```
+    ⚠️ Não é necessário incluir as credenciais Adobe diretamente — elas serão buscadas da API do Sydle One.
     
 
 3. **Instale todas as dependências (raiz, backend e frontend)**
-    bash
+    ```bash
     npm install
+    ```
 
 4. **Inicie o sistema (backend + frontend)**
-    bash
+    ```bash
     npm start
+    ```
 
 5. **Acesse a interface:**
     - Frontend: [http://localhost:3000](http://localhost:3000)
@@ -45,6 +49,8 @@ Upload, compressão e download com interface moderna — tudo rodando localmente
 ---
 
 ## 🗂️ Estrutura do projeto
+
+ ```bash
 Adobe-Web-Compressor-PDF/
 ├── backend/
 │ ├── compress/
@@ -60,13 +66,17 @@ Adobe-Web-Compressor-PDF/
 ├── .gitignore
 ├── README.md
 └── package.json # scripts unificados com concurrently
+```
+---
 
 ## 🖼️ Interface
 
 <img width="1900" height="908" alt="image" src="https://github.com/user-attachments/assets/ccf6267f-cbbc-426a-90d0-b01c3c4a6eda" />
-<img width="1902" height="906" alt="image" src="https://github.com/user-attachments/assets/d728ed0b-8c25-4cc6-a52b-acb0c33748d7" />
-<img width="1900" height="908" alt="image" src="https://github.com/user-attachments/assets/d9d69b8a-848e-4aac-a161-2ab54da2c192" />
-<img width="1898" height="908" alt="image" src="https://github.com/user-attachments/assets/0f1db709-8dee-4cbf-92df-a0b85ad0b825" />
+<img width="1894" height="865" alt="image" src="https://github.com/user-attachments/assets/b5e19186-23ac-4755-829e-cccd43a6a868" />
+<img width="1894" height="863" alt="image" src="https://github.com/user-attachments/assets/dc638d4b-8085-4c3b-8334-9421017b75aa" />
+<img width="1895" height="868" alt="image" src="https://github.com/user-attachments/assets/a9441037-a648-42ba-bed8-7b6aac400eb0" />
+<img width="1896" height="857" alt="image" src="https://github.com/user-attachments/assets/da81bc81-48b1-4989-98dc-276e9cd100bf" />
+<img width="1894" height="859" alt="image" src="https://github.com/user-attachments/assets/2abc276e-640c-41dd-b253-da3afc6b5593" />
 
 ---
 
@@ -78,6 +88,14 @@ Adobe-Web-Compressor-PDF/
 - [@adobe/pdfservices-node-sdk](https://www.npmjs.com/package/@adobe/pdfservices-node-sdk)
 - [Concurrently](https://www.npmjs.com/package/concurrently)
 - CSS puro
+---
+
+## 🛡️ Segurança
+
+- As credenciais da Adobe são buscadas exclusivamente do seu ambiente Sydle One via backend.
+- O token de autenticação do Sydle One deve ser mantido em segredo no arquivo .env do backend.
+- Nunca exponha credenciais sensíveis no frontend.
+
 ---
 
 ## 💡 Créditos
