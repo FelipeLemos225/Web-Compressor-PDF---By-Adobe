@@ -28,7 +28,8 @@ const upload = multer({ storage });
 app.post("/compress", upload.single("file"), async (req, res) => {
   try {
     const inputPath = req.file.path;
-    const outputPath = await compressPDF(inputPath);
+    const compressionLevel = req.body.compressionLevel || "HIGH";
+    const outputPath = await compressPDF(inputPath, compressionLevel);
     res.download(outputPath);
   } catch (err) {
     console.error("Erro detalhado:", err);

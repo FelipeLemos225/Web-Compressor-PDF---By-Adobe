@@ -1,29 +1,33 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
-/uploads
-/output
+# Backend folders
+backend/uploads/
+backend/output/
+backend/node_modules/
+backend/.env
+
+# Frontend folders
+frontend/node_modules/
+frontend/build/
+frontend/.env
+
+# Dependencies
 /node_modules
 /.pnp
 .pnp.js
 .env
 
-# testing
+# Testing
 /coverage
 
-# production
+# Production
 /build
-
-# React
-frontend/node_modules/
-frontend/build/
-frontend/.env
 
 # VSCode/IDE
 .vscode/
 .idea/
 
-# misc
+# Misc
 .DS_Store
 .env.local
 .env.development.local
