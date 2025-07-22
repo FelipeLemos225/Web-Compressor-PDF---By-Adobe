@@ -94,7 +94,6 @@ Adobe-Web-Compressor-PDF/
 
 - As credenciais da Adobe são buscadas exclusivamente do seu ambiente Sydle One via backend.
 - O token de autenticação do Sydle One deve ser mantido em segredo no arquivo .env do backend.
-- Nunca exponha credenciais sensíveis no frontend.
 
 ---
 
