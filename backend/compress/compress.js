@@ -101,6 +101,17 @@ module.exports = async function compressPDF(inputFilePath, compressionLevel = "H
         throw new Error(
           "As credenciais da conta ADOBE estão incorretas. Acesse o SydleOne para corrigir."
         );
+      } else if (
+        err._errorCode === "DOCUMENT_RESTRICTED" ||
+        (err.message &&
+          err.message.includes(
+            "Source file cannot be processed because of some restrictions"
+          ))
+      ) {
+        throw new Error(
+          "O arquivo PDF não pôde ser processado devido a restrições internas (proteção, assinatura ou bloqueio). " +
+            "Para tentar resolver, abra o PDF em seu leitor, selecione 'Imprimir' e salve essa versão de impressão novamente como PDF. Depois tente comprimir o novo arquivo."
+        );
       }
     }
 

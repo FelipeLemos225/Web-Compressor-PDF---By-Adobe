@@ -12,7 +12,7 @@ const path = require("path"); //módulo para montar caminhos seguros
 
 dotenv.config(); //lê o .env no início e disponibiliza para process.env
 const app = express(); // inicializa o Express
-app.use(cors()); // ativa o CORS
+app.use(cors({ origin: "*" })); // ativa o CORS
 app.use(express.json()); // receber /json no corpo das requisições
 
 //---------------------------------Configuração multer para upload-----------------------------------------//
