@@ -9,8 +9,10 @@ Upload, compressão e download com interface moderna — tudo rodando localmente
 
 - Upload e download de PDFs direto no navegador
 - Compressão eficiente usando a API oficial da Adobe
+- Níveis de compressão (Alta, Média, Baixa)
 - Mensagens, animações e feedback visual
 - Limpeza automática dos arquivos temporários (backend)
+- Integração com Sydle One: credenciais Adobe buscadas automaticamente
 - Projeto pronto para rodar com **um comando** usando [`concurrently`](https://www.npmjs.com/package/concurrently)
 
 ---
@@ -45,6 +47,13 @@ Upload, compressão e download com interface moderna — tudo rodando localmente
 5. **Acesse a interface:**
     - Frontend: [http://localhost:3000](http://localhost:3000)
     - Backend: [http://localhost:5000](http://localhost:5000) (API)
+
+---
+## 🖥️ (Opcional) Hospedando o backend (Railway)
+Se quiser rodar o backend em nuvem, basta subir o conteúdo da pasta /backend para o seu serviço Node.js e configurar a variável de ambiente SYDLE_TOKEN com seu token do Sydle One.
+No Railway,
+ - O frontend pode continuar hospedado no Sydle One ou outra plataforma estática.
+ - Configure no frontend a URL do backend.
 
 ---
 
